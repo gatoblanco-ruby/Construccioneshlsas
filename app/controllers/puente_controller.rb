@@ -1,0 +1,2 @@
+class PuenteController < ApplicationController
+end

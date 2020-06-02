@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil</title>
+</head>
+<body>
+<div class="container">
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-secondary">
+        <div class="col-md p-lg mx-auto my">
+            <h1 class="display-4 font-weight-normal">Hola!, Ahora cuentas con permisos de administrador</h1>
+        </div>
+    </div>
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+        <div class="col-md p-lg mx-auto my">
+            <h2 class="display-3">Registro de Nuevos trabajadores</h2>
+            <%= link_to "Trabajadores", fellows_path, class:"btn btn-warning btn-user" %>
+        </div>
+    </div>
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-secondary">
+        <div class="col-md p-lg mx-auto my">
+            <h2 class="display-3">Registro de horas laborales</h2>
+            <%= link_to "Regsitro de horas", payrolls_path, class:"btn btn-danger btn-user" %>
+        </div>
+    </div>
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+        <div class="col-md p-lg mx-auto my">
+            <h2 class="display-3">Editar perfil de administrador</h2>
+            <%= link_to "Regsitro de horas", administrators_path, class:"btn btn-danger btn-user" %>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+
+   

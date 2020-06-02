@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Hey</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div id="demo" class="carousel slide" data-ride="carousel">
+                    <ul class="carousel-indicators">
+                        <li data-target="demo" data-slide-to="0" class="active"></li>
+                        <li data-target="demo" data-slide-to="1" ></li>
+                    </ul>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <%= image_tag("carousel/carousel2.jpg", class:"img-fluid", style: "min-height: 699px;") %>
+                                    <div class="carousel-caption">
+                                        <h1 class="text-warning mark-dark">Construimos tu hogar dandote la mejor comodidad</h1>
+                                        <p></p>
+                                    </div>
+                            </div>
+                            <div class="carousel-item">
+                                <%=  image_tag("carousel/casco.jpg", class:"img-fluid", style: "min-height: 699px;") %>
+                                    <div class="carousel-caption">
+                                        <h1 class="text-warning">Nos preocupamos en la calidad de los servicios que te brindamos</h1>
+                                        <p></p>
+                                    </div>
+                            </div>
+                        </div>
+                        <a href="#demo" class="carousel-control-prev" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
+                        <a href="#demo" class="carousel-control-next" data-slide="next"><span class="carousel-control-next-icon"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div id="perras">
+                        <p class="jumbotron font-weight-bold bg-warning display-5">
+                            Tenemos más de 20 años de experiencia como una constructora que brinda servicios con calidad y seguridad, hemos realizado todo tipo de construcciones en las cuales se refleja un eficiente manejo del trabajo optimizado; la calidad de nuestros servicios no se refleja solo en la construcción, pues contamos con remodelación y demolición de gran calidad.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="container">
+        <div class="row justify-content-between">
+                <div class="col-ms-3">
+                    <div class="card" id="perras1">
+                        <div class="card-header">
+                            <h4>Planeacion</h4>
+                        </div>
+                        <center><img class="rounded-circle" <%=  image_tag("tarjetaindex/planeacion.jpg", style: "width: 300px;") %></center>
+                        <div class="card-body">
+                            <h5 class="card-text">La planeacion de nuestros<br> proyectos es fundamental <br>para una estrucutracion <br>adecuada. Definiendo criterios<br>de aceptacion y tiempo de <br>ejecucion en estos.</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-ms-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Ejecucion</h4>
+                        </div>
+                        <center><img class="rounded-circle"<%=  image_tag("tarjetaindex/ejecucion.jpeg", style: "width: 230px;") %></center>
+                        <div class="card-body">
+                        <h5 class="card-text">En la ejecucion colocamos nuestra<br> mejor desempeño para garantizar <br>un mejor resultado, siguiendo una <br>guía muy enlazada con la planeación.<br><br></h5>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-ms-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4><center>Acabados y cierre</center></h4>
+                        </div>
+                        <center><img class="rounded-circle"  <%=  image_tag("tarjetaindex/acabado.jpg", style: "width: 220px;") %></center>
+                        <div class="card-body">
+                        <h5 class="card-text">Determinasmos si los criterios<br>establecidos en la planeacion<br>fueron cumplidos de forma<br>adecuada y en el tiempo<br>establecido.</h5>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+</body>
+</html>

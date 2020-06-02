@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miembros</title>
+</head>
+<body>
+    
+<div class="container">
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-secondary">
+        <div class="col-md p-lg mx-auto my">
+            <h1 class="display-4 font-weight-normal">Administradores</h1>
+        </div>
+    </div>
+    <table class="table table-secondary table-bordered table-hover">
+    <tr>
+    <thead>
+    <th>Codigo</th>
+    <th>Nombre</th>
+    <th>Email</th>
+    <th>Cedula</th>
+    <th>Cargo</th>
+    <th>Modificar</th>
+    <th>Eliminar</th>
+    
+    </thead>
+    </tr>
+    <% @administrators.each do |administrator|%>
+    <tr>
+    <td><%= administrator.id %></td>
+    <td><%= administrator.nombre %></td>
+    <td><%= link_to administrator.email, administrator_path(administrator) %></td>
+    <td><%= administrator.cedula %></td>
+    <td><%= administrator.cargo %></td>
+    <td><%= link_to "Editar", edit_administrator_path(administrator) %></td>
+    <td><%= link_to "Eliminar", administrator, method: :delete, data: {confirm: "¿Desea eliminar los datos de esta persona?"} %></td>
+    </tr>
+    <% end %>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @payroll.descripcion %>
+</p>
+
+<p>
+  <strong>Hora:</strong>
+  <%= @payroll.hora %>
+</p>
+
+<%= link_to 'Edit', edit_payroll_path(@payroll) %> |
+<%= link_to 'Back', payrolls_path %>

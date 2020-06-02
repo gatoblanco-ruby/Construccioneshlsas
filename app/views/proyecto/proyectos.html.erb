@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <!--Cabecera del album-->
+    <section class="jumbotron text-center">
+        <div class="container">
+          <h1>Algunos de nuestros proyectos</h1>
+        </div>
+    </section>
+    <!--Contenido de este-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 bg-warning">
+                    <%= image_tag("casalagartos/10.jpg", class:"featurette-image img-fluid mx-auto", alt:"100x100", style:"width: 400xp; height: 400xp;") %>
+                        <div class="card-body">
+                            <p class="card-text"><h5>Mantenimiento casa Lagartos</h5></p>
+                            <%= link_to "Ver Proyecto", lagartos_path, class:"btn btn-primary my-2" %>
+                            
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 bg-warning">
+                    <%= image_tag("cultura/9.jpg", class:"featurette-image img-fluid mx-auto", alt:"100x100", style:"width: 400xp; height: 400xp;") %>
+                        <div class="card-body">
+                            <p class="card-text"><h5>Restauracion y reforzamiento.</h5></p>
+                            <%= link_to "Ver Proyecto", casadelacultura_path, class:"btn btn-primary my-2" %>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 bg-warning">
+                    <%= image_tag("palacio/1.jpg", class:"featurette-image img-fluid mx-auto", alt:"100x100", style:"width: 400xp; height: 400xp;") %>
+                        <div class="card-body">
+                            <p class="card-text"><h5>Restauracion y reforzamiento palacio.</h5></p>
+                            <%= link_to "Ver Proyecto", palacio_path, class:"btn btn-primary my-2" %>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 bg-warning">
+                    <%= image_tag("convento/9.jpg", class:"featurette-image img-fluid mx-auto", alt:"100x100", style:"width: 400xp; height: 400xp;") %>
+                        <div class="card-body">
+                            <p class="card-text"><h5>Convento Santo Domingo</h5></p>
+                            <%= link_to "Ver Proyecto", convento_path, class:"btn btn-primary my-2" %>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 bg-warning">
+                    <%= image_tag("puente/1.jpg", class:"featurette-image img-fluid mx-auto", alt:"100x100", style:"width: 400xp; height: 400xp;") %>
+                        <div class="card-body">
+                            <p class="card-text"><h5>Construccion puente rio Teusaca</h5></p>
+                            <%= link_to "Ver Proyecto", puente_path, class:"btn btn-primary my-2" %>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 bg-warning">
+                    <%= image_tag("bodega/9.jpg", class:"featurette-image img-fluid mx-auto", alt:"100x100", style:"width: 400xp; height: 400xp;") %>
+                        <div class="card-body">
+                            <p class="card-text"><h5>Bodega las Ferias</h5></p>
+                            <%= link_to "Ver Proyecto", bodega_path, class:"btn btn-primary my-2" %>
+                        </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</body>
+</html>

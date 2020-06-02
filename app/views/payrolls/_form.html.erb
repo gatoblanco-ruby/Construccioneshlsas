@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=Nuevo reporte horas para nomina, initial-scale=1.0">
+  <title>Nuevo reporte de nomina para horas</title>
+</head>
+<body>
+  <%= form_with(model: payroll, local: true) do |form| %>
+  <% if payroll.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(payroll.errors.count, "error") %> prohibited this payroll from being saved:</h2>
+      <ul>
+        <% payroll.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+              <div class="card">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="p-5">
+                      <div class="text-center">
+                        <h1 class="text-gray-900 mb-4">Reporte de horas para nomina</h1>
+                      </div>
+                      <div class="field">
+                        <h1><%= form.label :descripcion %></h1>
+                        <%= form.text_field :descripcion, class:"form-control form-control-user" %>
+                        </div>
+                        <div class="field">
+                          <h1><%= form.label :hora %></h1>
+                          <%= form.number_field :hora, class:"form-control form-control-user" %>
+                        </div>
+                        <div class="field">
+                          <h1><%= form.label :codigo %></h1>
+                          <%= form.number_field :fellow_id, class:"form-control form-control-user" %>
+                        </div>
+                        <div class="actions">
+                          <%= form.submit %>
+                        </div>
+                        <% end %>
+                     
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+</body>
+</html>

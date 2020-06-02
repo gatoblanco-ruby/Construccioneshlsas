@@ -1,0 +1,2 @@
+class NosotrosController < ApplicationController
+end

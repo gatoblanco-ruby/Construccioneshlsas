@@ -1,0 +1,2 @@
+class PalacioController < ApplicationController
+end

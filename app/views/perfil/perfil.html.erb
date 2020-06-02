@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil</title>
+</head>
+<body>
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  <!-- Custom styles for this template -->
+  <link href="./Blog Template · Bootstrap_files/css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="./Blog Template · Bootstrap_files/blog.css" rel="stylesheet">
+  <style type="text/css">.selassist-highlight { outline: thick dotted red; opacity: 0.5; background-color: yellow; } .selassist-tooltiptext-top { font-size: 12px !Important; opacity:1 !Important; background-color: black; color: #37EF50; text-align: center;  border-radius: 6px; padding: 5px; position: fixed; z-index: 999999999999;} .selassist-tooltiptext-top::after { content: " "; position: absolute; top: 100%; left: 20%; margin-left: -8px; border-width: 8px; border-style: solid; border-color: black transparent transparent transparent;} .selassist-tooltiptext-bottom { font-size: 12px !Important; opacity:1 !Important; background-color: black; color: #37EF50; text-align: center;  border-radius: 6px; padding: 5px; position: fixed; z-index: 999999999999;} .selassist-tooltiptext-bottom::after { content: " "; position: absolute; bottom: 100%; left: 20%; margin-left: -8px; border-width: 8px; border-style: solid; border-color: black transparent transparent transparent; transform: rotate(180deg);}</style></head>
+<body>
+  <div class="container">
+    <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+      <div class="row">
+        <div class="col-md-6 px-0">
+            <h1 class="display-4 font-italic">Bienvenido <%= current_fellow.nombre %></h1>
+            <p class="lead my-3">Estamos agradecidos de poder contar con usted en nuestro equipo, HL te abre las puertas para brindarte un espacio seguro de trabajo; gracias por formar parte de nuestra familia.
+            <br>
+            <br>
+            Puedes consultar tu registro de horas trabajadas en la siguiente tabla:
+            <table class="table table-secondary table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Descripcion</th>
+                  <th>Horas</th>
+                  <th>Datos de horas</th>
+                  </tr>
+              </thead>
+              <tbody >
+                <% @payrolls.each do |payroll| %>
+                  <tr>
+                    <td><%= payroll.descripcion %></td>
+                    <td><%= payroll.hora %></td>
+                    <td><%= payroll.created_at %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </p>
+        </div>
+        <hr>
+        <div class="col-md-6 px-0">
+          <%= image_tag("login/perfil.jpg", class:"img-fluid mx-auto", alt:"400x400", style:"width: 400xp; height: 400xp;") %>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+   

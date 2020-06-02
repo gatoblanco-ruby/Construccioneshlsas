@@ -1,0 +1,2 @@
+module PalacioHelper
+end

@@ -1,0 +1,2 @@
+class LargartosController < ApplicationController
+end

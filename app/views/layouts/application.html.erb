@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+    <title>Hl</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!--ESTILO DEL HEAD-->
+    <div class="container-fluid fixed-top" id="coco">
+      <nav class="navbar  navbar-expand-sm">
+        <a class="navbar-brand"><%= link_to image_tag("logo.jpg", :alt => "logo", style: "width: 100px;"), root_path %></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#uno"> 
+          <ion-icon name="menu-outline"></ion-icon>
+          </button>
+        <div class="collapse navbar-collapse" id="uno">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item" class="float-right">
+            <h4 class="font-italic"><%= link_to "Inicio", root_path, class:"nav-link" %></h4>
+            </li>
+            <li class="nav-item">
+            <h4 class="font-italic"><%= link_to "Nosotros",  quienessomos_path, class:"nav-link" %></h4>
+            </li>
+            <li class="nav-item">
+            <h4 class="font-italic"><%= link_to "Proyecctos", proyectos_path, class:"nav-link" %></h4>
+            </li>
+            <li class="nav-item">
+            <h4 class="font-italic "><%= link_to "Servicios", servicio_path, class:"nav-link" %></h4>
+            </li>
+    
+            <%- if fellow_signed_in? %>
+              <li><h4 class="font-italic"><%= link_to "Mi Perfil", perfil_path, class:"nav-link" %></h4></li>
+              <li><h4 class="font-italic"><%= link_to "Salir", destroy_fellow_session_path, method: :delete, class:"nav-link" %></h4></li>
+            <% else %>
+              <li><h4 class="font-italic"><%= link_to "Log in", new_fellow_session_path, class:"nav-link" %></h4></li>  
+            <% end %>
+            <%- if administrator_signed_in? %>
+              <li><h4 class="font-italic"><%= link_to "Administrador", administrador_path,  class:"nav-link" %></h4></li>
+              <li><h4 class="font-italic"><%= link_to "Salir", destroy_fellow_session_path, method: :delete, class:"nav-link" %></h4></li>
+            <% end %>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </head>
+
+  <body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <%= yield %>
+
+<!-- Footer -->
+<footer class="font-italic page-footer font-small blue pt-4">
+
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+        <!-- Content -->
+        <h5 class="text-uppercase">Contacto</h5>
+        <p>Nos gustaria formar parte de sus proyectos no dude en contactarnos:</p>
+        <h6><%=  image_tag("pie/casa.png", style: "width: 30px;") %>Calle 68 bis Sur#81-20</h6>
+        <br>
+        <h6><%=  image_tag("pie/email.png", style: "width: 30px;") %>construccion.hl@gmail.com</h6>
+      </div>
+      <!-- Grid column -->
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+          <!-- Links -->
+          <h5 class="text-uppercase">Tambien</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="https://www.facebook.com/construccioneshlsas"><%=  image_tag("pie/face.png", style: "width: 30px;") %></a>
+            </li>
+            <li>
+              <a href="#!"><%=  image_tag("pie/pepe.png", style: "width: 30px;") %></a>
+            </li>
+            <li>
+              <a href="#!"><%=  image_tag("pie/twitter.png", style: "width: 30px;") %></a>
+            </li>
+           
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+
+          <!-- Links -->
+          <h5 class="text-uppercase">¿Aun no llamas?</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <h6><%=  image_tag("pie/celular.jpg", style: "width: 30px;") %>(+57)322 3351836</h6>
+            </li>
+          </ul>
+        </div>
+        <!-- Grid column -->
+      </div>
+    <!-- Grid row -->
+  </div>
+  <!-- Footer Links -->
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright: ConstruccionesHL
+   </div>
+  <!-- Copyright -->
+   
+</footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>

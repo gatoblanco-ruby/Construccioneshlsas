@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=Nomina, initial-scale=1.0">
+  <title>Nomina</title>
+</head>
+<body>
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+    <div class="col-md p-lg mx-auto my">
+        <h1 class="display-4 font-weight-normal">Reporte de horas para nomina</h1>
+    </div>
+</div>
+    <table class="table table-primary table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>Descripcion</th>
+          <th>Hora</th>
+          <th>Dia</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @payrolls.each do |payroll| %>
+          <tr>
+            <td><%= payroll.descripcion %></td>
+            <td><%= payroll.hora %></td>
+            <td><%= payroll.created_at %></td>
+            
+            <td><%= link_to 'Editar', edit_payroll_path(payroll) %></td>
+            <td><%= link_to 'Eliminar', payroll, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <br>
+    <%= link_to 'Nuevo reporte', new_payroll_path, class:"btn btn-danger btn-user btn-big" %>
+    <br>
+    <br>
+</div>
+</body>
+</html>

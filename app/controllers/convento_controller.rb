@@ -1,0 +1,2 @@
+class ConventoController < ApplicationController
+end
